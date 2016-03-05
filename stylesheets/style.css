@@ -1,4 +1,4 @@
-/* line 18, ../sass/style.scss */
+/* line 15, ../sass/style.scss */
 body {
   background-color: #34314c;
   text-align: center;
@@ -6,84 +6,68 @@ body {
   text-align: -webkit-center;
 }
 
-/* line 23, ../sass/style.scss */
-.title, h2 {
+/* line 20, ../sass/style.scss */
+h1.title, h2 {
   color: #ff7473;
   font-weight: bold;
-  font-size: 6.5vw;
+  font-size: 5.5vw;
+}
+@media (min-width: 650px) and (max-width: 889px) {
+  /* line 20, ../sass/style.scss */
+  h1.title, h2 {
+    font-size: 6.05vw;
+  }
+}
+@media (max-width: 649px) {
+  /* line 20, ../sass/style.scss */
+  h1.title, h2 {
+    font-size: 9.35vw;
+  }
 }
 
-/* line 29, ../sass/style.scss */
+/* line 32, ../sass/style.scss */
 h2 {
   color: #ffc952;
 }
 
-/* line 34, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 table.information {
   margin-top: 5rem;
   color: white;
   font-weight: bold;
-  font-size: 3.25vw;
+  font-size: 2.75vw;
+}
+@media (min-width: 890px) and (max-width: 1023px) {
+  /* line 37, ../sass/style.scss */
+  table.information {
+    font-size: 3.66666667vw;
+  }
+}
+@media (min-width: 650px) and (max-width: 889px) {
+  /* line 37, ../sass/style.scss */
+  table.information {
+    font-size: 6.05vw;
+  }
+}
+@media (max-width: 649px) {
+  /* line 37, ../sass/style.scss */
+  table.information {
+    font-size: 7.15vw;
+  }
 }
 
-/* line 41, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 table, th, td {
   border: 3px solid #ff7473;
   padding: 1rem;
 }
 
-/* line 46, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 td:nth-child(odd) {
   font-weight: bold;
 }
 
-/* line 49, ../sass/style.scss */
-td:nth-child(even) {
-  text-align: right;
-  text-align: -moz-right;
-  text-align: -webkit-right;
-}
-
-/* line 71, ../sass/style.scss */
-body {
-  background-color: #34314c;
-  text-align: center;
-  text-align: -moz-center;
-  text-align: -webkit-center;
-}
-
-/* line 76, ../sass/style.scss */
-.title, h2 {
-  color: #ff7473;
-  font-weight: bold;
-  font-size: 6.5vw;
-}
-
-/* line 82, ../sass/style.scss */
-h2 {
-  color: #ffc952;
-}
-
-/* line 87, ../sass/style.scss */
-table.information {
-  margin-top: 5rem;
-  color: white;
-  font-weight: bold;
-  font-size: 3.25vw;
-}
-
-/* line 94, ../sass/style.scss */
-table, th, td {
-  border: 3px solid #ff7473;
-  padding: 1rem;
-}
-
-/* line 99, ../sass/style.scss */
-td:nth-child(odd) {
-  font-weight: bold;
-}
-
-/* line 102, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 td:nth-child(even) {
   text-align: right;
   text-align: -moz-right;

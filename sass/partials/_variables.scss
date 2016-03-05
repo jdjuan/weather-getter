@@ -1,3 +1,41 @@
+// CUSTOM VARIABLES
+// =============================================================================
+
+$red : #ff7473;
+$yellow : #ffc952;
+$blue : #47b8e0;
+$darkBlue : #34314c;
+$fontSize : 5.5vw;
+$breakpoints: (phone: 640px, tablet: 768px, desktop: 1024px) !default;
+
+$small-width: 650px;
+$medium-width: 890px;
+$large-width: 1024px;
+
+@mixin very-small {
+  @media (max-width: #{$small-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: #{$small-width}) and (max-width: #{$medium-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$medium-width}) and (max-width: #{$large-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large-width}) {
+    @content;
+  }
+}
+
 // Variables
 //
 // If you have a base partial (or equivalent), you should move these lines to
@@ -28,7 +66,7 @@
     'ie':      null,
     'safari':  null,
     'opera':   null
-  ) !default;
+    ) !default;
 
 
 // The default font family.
