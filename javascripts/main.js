@@ -62,7 +62,7 @@ $(function(){
 		$.getJSON( "http://api.openweathermap.org/data/2.5/weather?",query, function( data ) {
 			var table = $("table.information");
 			var html = "";
-			$("#city").text(data.name);
+			$("#city").text(data.name+","+data.sys.country);
 			html += "<tr><td>Temperature:</td><td>"+data.main.temp+"°F</td></tr>";
 			html += "<tr><td>Description:</td><td>"+data.weather[0].description+"</td></tr>";
 			html += "<tr><td>Humidity:</td><td>"+data.main.humidity+"%</td></tr>";
