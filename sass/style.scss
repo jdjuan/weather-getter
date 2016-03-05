@@ -1,0 +1,106 @@
+$red : #ff7473;
+$yellow : #ffc952;
+$blue : #47b8e0;
+$darkBlue : #34314c;
+$fontSize : 6.5vw;
+
+@mixin center-aligner(){
+	text-align: center;
+	text-align: -moz-center;
+	text-align: -webkit-center;
+}
+@mixin right-aligner(){
+	text-align: right;
+	text-align: -moz-right;
+	text-align: -webkit-right;
+}
+
+body{
+	background-color: $darkBlue;
+	@include center-aligner();
+}
+
+.title{
+	color: #ff7473;
+	font-weight: bold;
+	font-size: $fontSize;
+}
+
+h2{
+	@extend .title;
+	color: $yellow;
+}
+
+table.information{
+	margin-top: 5rem;
+	color: white;
+	font-weight: bold;
+	font-size: $fontSize/2;
+}
+
+table, th, td {
+	border: 3px solid $red;
+	padding: 1rem;
+}
+
+td:nth-child(odd){
+	font-weight: bold;
+}
+td:nth-child(even){
+	@include right-aligner();
+}
+
+
+$red : #ff7473;
+$yellow : #ffc952;
+$blue : #47b8e0;
+$darkBlue : #34314c;
+$fontSize : 6.5vw;
+
+@mixin center-aligner(){
+	text-align: center;
+	text-align: -moz-center;
+	text-align: -webkit-center;
+}
+@mixin right-aligner(){
+	text-align: right;
+	text-align: -moz-right;
+	text-align: -webkit-right;
+}
+
+body{
+	background-color: $darkBlue;
+	@include center-aligner();
+}
+
+.title{
+	color: #ff7473;
+	font-weight: bold;
+	font-size: $fontSize;
+}
+
+h2{
+	@extend .title;
+	color: $yellow;
+}
+
+table.information{
+	margin-top: 5rem;
+	color: white;
+	font-weight: bold;
+	font-size: $fontSize/2;
+}
+
+table, th, td {
+	border: 3px solid $red;
+	padding: 1rem;
+}
+
+td:nth-child(odd){
+	font-weight: bold;
+}
+td:nth-child(even){
+	@include right-aligner();
+}
+
+
