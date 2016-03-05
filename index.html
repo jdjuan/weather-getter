@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 	<title>The Weather Project</title>
+	<!-- Default Compass Styles -->
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />	
+	<!-- Boostrap Styles -->
 	<link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />
+	<!-- SweetAlert Custom Styles -->
+	<link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
+	<!-- Main Custom Styles -->
 	<link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
 	<!-- [if IE]><link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" /><![endif] -->
+
+	<!-- Jquery CDN -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<!-- Latest compiled and minified Bootstrap JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="javascripts/main.js"></script>
+	<!-- SweetAlert scripts -->
+	<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 	<div class="container">
-		<h1 class="title">Hello!, this is the weather in </h1><h2 id="city">your location...<h2>
-		<table class="information">
-			
-		</table>
+		<h1 class="title">Hello!, this is the weather in </h1><h2 id="city">your location...</h2>
+		<table class="information"></table>
 	</div>
 </body>
 </html>

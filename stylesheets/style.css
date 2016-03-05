@@ -1,73 +1,77 @@
-/* line 15, ../sass/style.scss */
+/* line 19, ../sass/style.scss */
 body {
   background-color: #34314c;
   text-align: center;
   text-align: -moz-center;
   text-align: -webkit-center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* line 20, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 h1.title, h2 {
   color: #ff7473;
   font-weight: bold;
   font-size: 5.5vw;
 }
 @media (min-width: 650px) and (max-width: 889px) {
-  /* line 20, ../sass/style.scss */
+  /* line 24, ../sass/style.scss */
   h1.title, h2 {
     font-size: 6.05vw;
   }
 }
 @media (max-width: 649px) {
-  /* line 20, ../sass/style.scss */
+  /* line 24, ../sass/style.scss */
   h1.title, h2 {
     font-size: 9.35vw;
   }
 }
 
-/* line 32, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 h2 {
   color: #ffc952;
 }
 
-/* line 37, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 table.information {
   margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
   color: white;
   font-weight: bold;
   font-size: 2.75vw;
 }
 @media (min-width: 890px) and (max-width: 1023px) {
-  /* line 37, ../sass/style.scss */
+  /* line 41, ../sass/style.scss */
   table.information {
     font-size: 3.66666667vw;
   }
 }
 @media (min-width: 650px) and (max-width: 889px) {
-  /* line 37, ../sass/style.scss */
+  /* line 41, ../sass/style.scss */
   table.information {
     font-size: 6.05vw;
   }
 }
 @media (max-width: 649px) {
-  /* line 37, ../sass/style.scss */
+  /* line 41, ../sass/style.scss */
   table.information {
     font-size: 7.15vw;
   }
 }
 
-/* line 53, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 table, th, td {
   border: 3px solid #ff7473;
   padding: 1rem;
 }
 
-/* line 58, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 td:nth-child(odd) {
   font-weight: bold;
 }
 
-/* line 62, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 td:nth-child(even) {
   text-align: right;
   text-align: -moz-right;
