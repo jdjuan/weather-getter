@@ -1,9 +1,14 @@
 $(function(){
 	var query= {"appid":"effc0084ed304b81b81ed7c6987a7865"};
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(getPosition,showError);
-	} else {
-		sweetAlert("Oops...", "Geolocation is not supported by this browser!", "error");
+
+	requestLocation();
+
+	function requestLocation(){
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(getPosition,getError);
+		} else {
+			sweetAlert("Oops...", "Geolocation is not supported by this browser!", "error");
+		}
 	}
 
 	function getPosition(position) {
@@ -12,22 +17,26 @@ $(function(){
 		fetchData();
 	}
 
-	function showError(error) {
+	function getError(error) {
 		var errorMessage;
 		switch(error.code) {
 			case error.PERMISSION_DENIED:
-			errorMessage = "Oh!, Geolocation is not allowed"
+			errorMessage = "Oh!, Geolocation is not allowed";
 			break;
 			case error.POSITION_UNAVAILABLE:
-			errorMessage = "Oh!, Geolocation is not available."
+			errorMessage = "Oh!, Geolocation is not available.";
 			break;
 			case error.TIMEOUT:
-			errorMessage= "Oh!, It took more than often"
+			errorMessage= "Oh!, It took more than often";
 			break;
 			case error.UNKNOWN_ERROR:
-			errorMessage= "Oh!, something very weird just happpened"
+			errorMessage= "Oh!, something very weird just happpened";
 			break;
 		}
+		showError(errorMessage);
+	}
+
+	function showError(errorMessage) {
 		swal({title: errorMessage,   
 			text: "No problem, we've got it, just type in your postal code or city:",   
 			type: "input",   
