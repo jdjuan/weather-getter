@@ -2,20 +2,6 @@
 // @import 'partials/normalize';
 @import 'partials/mixins';
 
-@mixin center-aligner(){
-	text-align: center;
-	text-align: -moz-center;
-	text-align: -webkit-center;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-@mixin right-aligner(){
-	text-align: right;
-	text-align: -moz-right;
-	text-align: -webkit-right;
-}
-
 body{
 	background-color: $darkBlue;
 	@include center-aligner();
