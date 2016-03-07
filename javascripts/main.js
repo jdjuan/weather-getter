@@ -7,7 +7,7 @@ $(function(){
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(getPosition,getError);
 		} else {
-			sweetAlert("Oops...", "Geolocation is not supported by this browser!", "error");
+			showError("Geolocation is not supported by this browser!");
 		}
 	}
 
