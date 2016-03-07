@@ -1,8 +1,11 @@
 $(function(){
+	//Variable holding the APP ID in order to make request to the server
 	var query= {"appid":"effc0084ed304b81b81ed7c6987a7865"};
 
+	//First step is to validate the user Geolocation Support
 	requestLocation();
 
+	//In case it is not supported a window will pop up for the user to enter the postCode
 	function requestLocation(){
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(getPosition,getError);
@@ -11,12 +14,14 @@ $(function(){
 		}
 	}
 
+	//In case Geolocation is supported, the latitude and longitude values are gathered
 	function getPosition(position) {
 		query["lat"]=position.coords.latitude;
 		query["lon"]=position.coords.longitude;
 		fetchData();
 	}
 
+	//In case of Geolocation error, the message is customized for the user
 	function getError(error) {
 		var errorMessage;
 		switch(error.code) {
@@ -36,6 +41,8 @@ $(function(){
 		showError(errorMessage);
 	}
 
+	//Show the pop up window in order to allow the user to enter the postCode
+	//This uses external Library: Sweet Alert
 	function showError(errorMessage) {
 		swal({title: errorMessage,   
 			text: "No problem, we've got it, just type in your postal code or city:",   
@@ -58,6 +65,7 @@ $(function(){
 			});
 	}
 
+	//Make the petition to the server using jQuery and update the DOM
 	function fetchData(){
 		$.getJSON( "http://api.openweathermap.org/data/2.5/weather?",query, function( data ) {
 			var table = $("table.information");
