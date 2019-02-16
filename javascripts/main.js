@@ -67,7 +67,7 @@ $(function(){
 
 	//Make the petition to the server using jQuery and update the DOM
 	function fetchData(){
-		$.getJSON( "http://api.openweathermap.org/data/2.5/weather?",query, function( data ) {
+		$.getJSON( "https://api.openweathermap.org/data/2.5/weather?",query, function( data ) {
 			var table = $("table.information");
 			var html = "";
 			$("#city").text(data.name+","+data.sys.country);
